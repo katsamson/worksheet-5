@@ -38,7 +38,7 @@ function roll_die (){
   return result;
 }
 
-function 5rolls() {
+function five_rolls() {
     var result = [0];
     var index = 0
     while (index < 5) {
@@ -54,5 +54,69 @@ function yahtzee() {
         return 50;
     }
     return 0;
+}
+
+function sum_of_numbers(list) {
+	var index;
+	var total;
+	index = 0;
+	total = 0;
+	while (index < list.length) {
+		total = total + list[index];
+		index = index + 1;
+	}
+	return total;
+}
+
+
+function reorder(first, second) {
+	if (first > second) {
+	return 1;
+} else {
+	return -1;
+} 
+		if (first === second) {
+		return 0;
+} 
+}
+function four_of_a_kind(list) {
+    list.sort(reorder);
+    if (list[0] === list[1] && list[1] === list[2] && list[2] === list[3] || list[1] === list[2] && list[2] === list[3] && list[3] === list[4]) {
+    	return sum_of_numbers(list);
+}
+    return 0;
+}
+
+
+
+function large_straight(list) {
+	list.sort(reorder);
+    if ([list[1] === list[0] + 1 && list[2] === list[1] + 1 && list[3] === list[2] + 1 && list[4] === list[3] + 1)   { 
+        return 40;
+}
+    return 0;
+}
+
+
+function three_and_pair(list) {
+	list.sort(reorder);
+    if (list[0] === list[1] && list[1] === list[2] && list[3] === list[4] || list[0] === list[1] && list[2] === list[3] && list[3] === list[4] ) {
+        return 25;
+}
+    return 0;
+}
+
+function list_return (five_rolls, yahtzee) {
+	var list; 
+		while (sum_of_numbers < list.length); {
+		return list_return; 
+			(sum_of_numbers = sum_of_numbers + 1);
+}
+	yahtzee() 
+	yahtzee = 0;
+	while (yahtzee < list.length); {
+	return list_return;
+	(yahtzee = yahtzee + 1);
+}
 }
 
